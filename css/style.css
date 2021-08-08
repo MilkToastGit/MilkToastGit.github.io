@@ -9,7 +9,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .header {
 	display: grid;
-	grid-template-columns: 1fr auto auto auto;
+	grid-template-columns: 1fr auto auto auto 20px;
 	width: 100%;
 	height: 75px;
 	box-shadow: 0px 3px #F50074;
@@ -23,12 +23,17 @@ h1, h2, h3, h4, h5, h6 {
 	user-select: none;
 }
 
-.header > a {
-	padding: 0 35px;
+.header > a, .header > img {
+  cursor: pointer;
+	padding: 0 25px;
 	margin-top: auto;
 	margin-bottom: auto;
 	align-self: center;
-	text-decoration: none;
+  transition: all ease-in-out 0.1s;
+}
+
+.header > a {
+  text-decoration: none;
 	text-align: center;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 22px;
@@ -37,10 +42,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .header > a:link { }
 .header > a:visited { }
-.header > a:hover {
-	color: #BB1111;
+.header > a:hover, .header > img:hover {
+  filter: brightness(75%);
+  transform: translateY(-5%);
 }
 
-.header > a:active {
-	color: black;
+.header > a:active, .header > img:active {
+  filter: brightness(25%);
+  transform: translateY(0%);
+}
+
+.header > img {
+  height: 1.5em;
 }
