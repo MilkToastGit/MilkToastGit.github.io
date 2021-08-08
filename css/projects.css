@@ -1,0 +1,58 @@
+.center {
+	display: grid;
+	grid-template-columns: 1fr 40% 1fr;
+	width: 80%;
+	height: 40vw;
+	margin: auto;
+	margin-top: 50px;
+}
+
+.project-arrow {
+	cursor: pointer;
+	margin: auto;
+	width: 40%;
+	transition: width ease-in-out 0.3s;
+}
+
+.project-arrow:hover {
+	width: 45%;
+}
+
+.tv-container {
+	position: relative;
+	margin: auto;
+	width: 100%;
+	height: 40vw;
+	top: 25px;
+}
+
+#tv, #project-image, #tv-static, #tv-link {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#tv {
+	width: 100%;
+	z-index: 2;
+}
+
+#tv-link {
+	cursor: pointer;
+	width: 100%;
+	padding-top: 80%;
+	z-index: 3;
+}
+
+#tv-static {
+	z-index: 1;
+	width: 80%;
+	height: 43%;
+	visibility: hidden;
+}
+
+#project-image {
+	width: 80%;
+	transform: translate(-50%, -52%);
+}
