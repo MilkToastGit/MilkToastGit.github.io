@@ -1,11 +1,13 @@
 /* CSS Document */
 body {
 	background-color: #EE0D70;
+	min-height: 100vh;
 }
 
 .center {
 	background-color: white;
 	width: 45%;
+	height: 100%;
 	margin: auto;
 	padding: 50px 20px;
 }
@@ -31,7 +33,7 @@ body {
 
 .attributes-container {
 	display: grid;
-	grid-template-columns: auto auto;
+	grid-template-columns: 1fr 1fr;
 }
 
 .attributes-container h3 {
@@ -62,7 +64,7 @@ body {
 }
 
 .blurb-container {
-	width: 50%;
+	width: 60%;
 	margin: auto;
 }
 
