@@ -1,0 +1,86 @@
+body, html {
+	background-color: white;
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+h2, h3 {
+  color: black;
+  font-weight: 200;
+  margin-bottom: 0;
+}
+
+.panel-header {
+  background-color: #EE0D70;
+  width: 100%;
+}
+
+.panel-header h3 {
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  /* font-family: 'Noto Sans JP', sans-serif; */
+  font-family: 'Inconsolata', monospace;
+  opacity: 60%;
+  margin: 0;
+  padding-top: 20px;
+}
+
+.panel-header h1 {
+  color: white;
+  text-align: center;
+  font-size: 48px;
+  /* font-family: 'Noto Sans JP', sans-serif; */
+  font-family: 'Inconsolata', monospace;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.panel-contents-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 100%;
+}
+
+.panel-contents {
+  margin: 35px 62px;
+  height: 100%;
+}
+
+.youtube-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.youtube-container iframe {
+  position:  absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.button-container button {
+  width: 100%;
+  margin: 0 10px;
+}
+
+.button-container button:first-child {
+  margin-left: 0;
+}
+
+.button-container button:last-child {
+  margin-right: 0;
+}

@@ -39,6 +39,23 @@ function incrementIndex(amount) {
     (currentIndex + 1).toString().padStart(2, 0) + ".png");
 }
 
-function goToSelected() {
-  window.location.href = "projects/" + (currentIndex + 1).toString().padStart(2, 0) + ".html";
+function showProjectPanel() {
+  window.location = "#";
+  let background = document.getElementById("project-panel-background");
+  background.style.visibility = "visible";
+  background.style.opacity = "50%";
+  let panel = document.getElementById("project-panel");
+  // panel.setAttribute("src", "project-" + (currentIndex + 1).toString().padStart(2, 0) + ".html");
+  panel.contentWindow.location.replace("project-" + (currentIndex + 1).toString().padStart(2, 0) + ".html");
+  panel.style.width = "75%";
+  panel.style.height = "85%";
+}
+
+function hideProjectPanel() {
+  let background = document.getElementById("project-panel-background");
+  background.style.opacity = "0%";
+  setTimeout (function() {background.style.visibility = "hidden";}, 500);
+  let panel = document.getElementById("project-panel");
+  panel.style.height = "0";
+  panel.style.width = "0";
 }

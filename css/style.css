@@ -3,15 +3,38 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto Mono', monospace;
 	color: #F50074;
+}
+
+p {
+	color: #666666;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+button {
+  background-color: #EE0D70;
+  color: white;
+	font-family: 'Roboto Mono', monospace;
+	font-size: 18px;
+  padding: 20px 30px;
+	border-style: solid;
+	border-color: #700B3C;
+	border-width: 0;
+	border-bottom-width: 7px;
+	transition: border-bottom-width ease-in-out 0.1s, transform ease-in-out 0.1s;
+}
+
+button:active {
+	transform: translateY(7px);
+	border-bottom-width: 0;
 }
 
 .header {
 	z-index: 5;
 	position: fixed;
 	display: grid;
-	grid-template-columns: 1fr auto auto auto 20px;
+	grid-template-columns: 1fr auto auto auto auto 20px;
 	width: 100%;
 	height: 75px;
 	box-shadow: 0 3px 10px #700b3cff;
@@ -27,6 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: auto;
 	margin-bottom: auto;
 	text-align: left;
+	font-family: 'Open Sans', sans-serif;
 	user-select: none;
 }
 
@@ -36,7 +60,8 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: auto;
 	margin-bottom: auto;
 	align-self: center;
-  transition: all ease-in-out 0.1s;
+	transition: filter ease-in-out 0.1s;
+  transition: transform ease-in-out 0.1s;
 }
 
 .header > a {
