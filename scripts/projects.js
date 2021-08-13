@@ -47,7 +47,7 @@ function showProjectPanel() {
   let panel = document.getElementById("project-panel");
   // panel.setAttribute("src", "project-" + (currentIndex + 1).toString().padStart(2, 0) + ".html");
   panel.contentWindow.location.replace("project-" + (currentIndex + 1).toString().padStart(2, 0) + ".html");
-  panel.style.width = "75%";
+  panel.style.width = "60%";
   panel.style.height = "85%";
 }
 

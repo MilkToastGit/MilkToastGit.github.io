@@ -1,6 +1,7 @@
 body, html {
 	background-color: white;
   width: 100%;
+	height: 100%;
   margin: 0;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -38,14 +39,15 @@ h2, h3 {
   padding-bottom: 20px;
 }
 
-.panel-contents-container {
+.panel-body {
   display: grid;
-  grid-template-columns: 50% 50%;
+  /* grid-template-columns: 65% 35%; */
+	grid-template-columns: auto 400px;
   height: 100%;
 }
 
-.panel-contents {
-  margin: 35px 62px;
+.description-panel {
+  padding: 35px 62px;
   height: 100%;
 }
 
@@ -70,6 +72,7 @@ h2, h3 {
   flex-direction: row;
   align-items: flex-start;
   width: 100%;
+	margin-top: 30px;
 }
 
 .button-container button {
@@ -83,4 +86,25 @@ h2, h3 {
 
 .button-container button:last-child {
   margin-right: 0;
+}
+
+.skills-panel {
+	background-color: #F2F2F2;
+	padding: 0px 40px;
+  height: 100%;
+}
+
+.skills-panel h2 {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.skill h3 {
+	color: #666666;
+}
+
+.skill p {
+	margin-top: 5px;
+	font-size: 14px;
 }
