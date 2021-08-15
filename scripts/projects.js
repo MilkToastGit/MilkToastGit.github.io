@@ -1,6 +1,22 @@
 let transitioning = false;
 const projectCount = 4;
 let currentIndex = 0;
+let panelOpen = false;
+let hash = window.location.hash;
+
+setInterval(function() {
+  if (window.location.hash != hash)
+  {
+    hash = window.location.hash;
+    if (hash == "" || hash == "#" && panelOpen)
+      hideProjectPanel();
+    else
+    {
+      setIndex(hash.slice(1));
+      showProjectPanel();
+    }
+  }
+}, 200);
 
 function transition(time) {
   if (transitioning) return;
@@ -39,8 +55,15 @@ function incrementIndex(amount) {
     (currentIndex + 1).toString().padStart(2, 0) + ".png");
 }
 
+function setIndex(index) {
+  currentIndex = Math.min(Math.max(index, 0), projectCount - 1);
+  document.getElementById("project-image").setAttribute("src", "images/project-" +
+    (currentIndex + 1).toString().padStart(2, 0) + ".png");
+}
+
 function showProjectPanel() {
-  window.location = "#";
+  panelOpen = true;
+  window.location.hash = "#" + currentIndex;
   let background = document.getElementById("project-panel-background");
   background.style.visibility = "visible";
   background.style.opacity = "50%";
@@ -52,6 +75,8 @@ function showProjectPanel() {
 }
 
 function hideProjectPanel() {
+  panelOpen = false;
+  window.location.hash = "#";
   let background = document.getElementById("project-panel-background");
   background.style.opacity = "0%";
   setTimeout (function() {background.style.visibility = "hidden";}, 500);

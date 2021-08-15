@@ -12,7 +12,7 @@ p {
 	font-family: 'Noto Sans JP', sans-serif;
 }
 
-button {
+button, input[type="submit"] {
   background-color: #EE0D70;
   color: white;
 	font-family: 'Roboto Mono', monospace;
@@ -22,15 +22,43 @@ button {
 	border-color: #700B3C;
 	border-width: 0;
 	border-bottom-width: 7px;
-	transition: border-bottom-width ease-in-out 0.1s, transform ease-in-out 0.1s;
+	transition: border-bottom-width ease-in-out 0.05s,
+	transform ease-in-out 0.05s,
+	background-color ease-in-out 0.05s;
 }
 
-button:active {
+button:hover, input[type="submit"]:hover {
+	background-color: #F5197C;
+	transform: translateY(-2px);
+	border-bottom-width: 9px;
+}
+
+button:active, input[type="submit"]:active {
+	background-color: #EE0D70;
 	transform: translateY(7px);
 	border-bottom-width: 0;
 }
 
-.header {
+input[type="text"], textarea {
+	border-style: none;
+	background-color: #F2F2F2;
+	border-radius: 20px;
+	padding: 10px 15px;
+	font-family: 'Noto Sans JP', sans-serif;
+	box-sizing: border-box;
+}
+
+input[type="text"]:focus, textarea:focus {
+	outline: none;
+	background-color: #EEEEEE;
+}
+
+label {
+	font-family: 'Noto Sans JP', sans-serif;
+	padding-right: 10px;
+}
+
+ .header {
 	z-index: 5;
 	position: fixed;
 	display: grid;
@@ -45,45 +73,48 @@ button:active {
 	height: 75px;
 }
 
-.header > h1 {
+.header-name {
 	padding: 0px 35px;
+	width: 200px;
 	margin-top: auto;
 	margin-bottom: auto;
 	text-align: left;
+
 	font-family: 'Open Sans', sans-serif;
-	user-select: none;
+	text-decoration: none;
+	font-size: 34px;
+	color: #F50074;
 }
 
-.header > a, .header > img {
+.header-link {
   cursor: pointer;
 	padding: 0 25px;
 	margin-top: auto;
 	margin-bottom: auto;
 	align-self: center;
-	transition: filter ease-in-out 0.1s;
-  transition: transform ease-in-out 0.1s;
-}
 
-.header > a {
   text-decoration: none;
 	text-align: center;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 22px;
 	color: #F50074;
+
+	transition: filter ease-in-out 0.1s;
+	transition: transform ease-in-out 0.1s;
 }
 
-.header > a:link { }
-.header > a:visited { }
-.header > a:hover, .header > img:hover {
+.header-link:link { }
+.header-link:visited { }
+.header-link:hover, .header img:hover {
   filter: brightness(75%);
   transform: translateY(-5%);
 }
 
-.header > a:active, .header > img:active {
+.header-link:active {
   filter: brightness(25%);
   transform: translateY(0%);
 }
 
-.header > img {
+.header-link img {
   height: 1.5em;
 }

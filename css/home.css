@@ -10,23 +10,18 @@ body {
 	visibility: hidden;
 } */
 
-br {
+/* br {
 	margin-top: 10px;
 	margin-bottom: 10px;
-}
+} */
 
 .center {
-	border-width: 0;
-	border-left-width: 20px;
-	border-right-width: 20px;
+	border-width: 0 20px;
 	border-style: solid;
 	border-color: #700B3C;
 	background-color: white;
-	position: fixed;
 	width: 900px;
-	height: 100%;
-	left: 50%;
-	transform: translateX(-50%);
+	height: calc(100% - 75px);
 	margin: auto;
 }
 
@@ -52,6 +47,7 @@ br {
 	color: #666666;
 	text-align: center;
 	font-family: 'Noto Sans JP', sans-serif;
+	font-weight: lighter;
 	margin-top: 0;
 }
 
@@ -98,5 +94,15 @@ br {
 .blurb-container p {
 	padding: 15px;
 	font-style: italic;
-	font-size: 10pt;
+	font-size: 12pt;
+}
+
+.project-button-container {
+	margin: auto;
+	margin-bottom: 80px;
+	width: 300px;
+}
+
+.project-button-container button {
+	width: 100%;
 }
