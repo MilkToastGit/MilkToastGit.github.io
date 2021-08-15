@@ -24,18 +24,18 @@
 	<div class="header-space"></div>
 
 	<div class="center">
-		<img class="project-arrow" src="images/arrow-left.png" onclick="incrementIndex(-1);"/>
+		<img class="project-arrow" id="project-arrow-left" src="images/arrow-left.png" onclick="incrementIndex(-1);"/>
 		<div class="tv-container">
 			<div id="tv-link" onmouseover="highlightTV()" onmouseout="unhighlightTV();" onclick="showProjectPanel();"></div>
 			<img id="tv" src="images/tv.png"/>
 			<img id="tv-static" src="images/static.gif"/>
 			<img id="project-image" src="images/project-01.png"/>
 		</div>
-		<img class="project-arrow" src="images/arrow-right.png" onclick="incrementIndex(1);"/>
+		<img class="project-arrow" id="project-arrow-right" src="images/arrow-right.png" onclick="incrementIndex(1);"/>
 	</div>
 
 	<div id="project-panel-background" onclick="hideProjectPanel();"></div>
-	<div class="project-panel-container">
+	<div id="project-panel-container">
 		<iframe id="project-panel" src="index.html"></iframe>
 	</div>
 </body>

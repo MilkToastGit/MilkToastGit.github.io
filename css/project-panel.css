@@ -1,16 +1,23 @@
 body, html {
 	background-color: white;
   width: 100%;
-	height: 100%;
+	height: 100vh;
   margin: 0;
   overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 h2, h3 {
   color: black;
   font-weight: 200;
   margin-bottom: 0;
+}
+
+.fill	{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 .panel-header {
@@ -41,14 +48,19 @@ h2, h3 {
 
 .panel-body {
   display: grid;
-  /* grid-template-columns: 65% 35%; */
-	grid-template-columns: auto 400px;
-  height: 100%;
+	grid-template-columns: 60% auto;
+  height: calc(100% - 111.6px);
+	margin: 0;
+}
+
+@media (max-width: 850px) {
+	.panel-body {
+		grid-template-columns: 100%;
+	}
 }
 
 .description-panel {
   padding: 35px 62px;
-  height: 100%;
 }
 
 .youtube-container {

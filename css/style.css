@@ -118,3 +118,19 @@ label {
 .header-link img {
   height: 1.5em;
 }
+
+@media(max-width: 800px) {
+	.header	{
+		grid-template-columns: 1fr auto auto auto 80px;
+	}
+	.header-name {
+		font-size: 28px;
+		padding: 0 15px;
+		width: auto;
+		line-height: 30px;
+	}
+	.header-link {
+		font-size: 18px;
+		padding: 0 15px;
+	}
+}

@@ -12,14 +12,14 @@ html, body {
 	border-style: solid;
 	border-color: #700B3C;
 	background-color: white;
-	width: 1200px;
+	max-width: 1200px;
 	height: calc(100vh - 75px);
 	margin: auto;
 }
 
 .center-content-container {
 	padding-top: 75px;
-	width: 800px;
+	width: 80%;
 	margin: auto;
 }
 
