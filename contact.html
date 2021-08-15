@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>Ryan Vigus</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/contact.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto+Mono&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="header">
+		<a class="header-name" href="index.html">RYAN VIGUS</a>
+		<a class="header-link" href="index.html">ABOUT</a>
+		<a class="header-link" href="projects.html">PROJECTS</a>
+		<a class="header-link" href="contact.html">CONTACT</a>
+		<img class="header-link" src="images/twitter-icon.png" onclick="window.open('https://twitter.com/ryan_vigus');"/>
+	</div>
+	<div class="header-space"></div>
+
+	<div class="center">
+		<div class="center-content-container">
+			<form method="POST" action="contact-form-process.php">
+				<div class="name-email-inputs">
+					<label for="name">Name: </label>
+					<input type="text" id="name" name="Ecom_ShipTo_Postal_Name_Prefix" placeholder="Bingus Bonkleberry..." required>
+					<div class="vertical-gap"></div>
+					<label for="email">Email: </label>
+					<input type="text" id="email" name="email" placeholder="the_bonkle42@hotmail.com" required>
+				</div>
+
+				<div class="message-input">
+					<label for="message">Message: </label>
+					<textarea id="message" name="message" placeholder="Enter message..." rows="6" maxlength="3000" required></textarea>
+				</div>
+
+				<div class="submit-input">
+					<input type="submit" value="Submit">
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
