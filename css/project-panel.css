@@ -69,7 +69,7 @@ h2, h3 {
   padding-top: 56.25%;
 }
 
-.youtube-container iframe {
+.youtube-container iframe, .youtube-container img {
   position:  absolute;
    top: 0;
    left: 0;
