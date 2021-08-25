@@ -1,5 +1,5 @@
 let transitioning = false;
-const projectCount = 3;
+const projectCount = 4;
 let currentIndex = 0;
 let panelOpen = false;
 let hash = window.location.hash;
