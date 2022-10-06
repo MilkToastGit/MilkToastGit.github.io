@@ -1,75 +1,100 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-	<meta charset="utf-8">
-	<title>Ryan Vigus</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/home.css">
-	<meta name="viewport" content="width=display-width, initial-scale=1">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto+Mono&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-</head>
-<body>
-	<div class="header">
-		<a class="header-name" href="index.html">RYAN VIGUS</a>
-		<a class="header-link" href="projects.html">PROJECTS</a>
-		<a class="header-link" href="contact.html">CONTACT</a>
-		<img class="header-link" src="images/twitter-icon.png" onclick="window.open('https://twitter.com/ryan_vigus');"/>
-	</div>
-	<div class="header-space"></div>
+<html lang="en" style="height: 100%;">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="project-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi+Ink&&family=Roboto&family=Open+Sans&display=swap" rel="stylesheet"> 
+    <meta charset="utf-8" />
+  </head>
+  <body id="body">
+    <div id="templates">
+      <table id="project-cover">
+        <tr>
+          <td style="width:60%" class="project-info">
+            <h1 class="title"></h1>
+            <h2 class="short-description"></h2>
+            <p class="description"></p>
+          </td>
+          <td class="project-images">
+            <p class="date"></p>
+            <p class="time-span"></p>
+          </td>
+        </tr>
+      </table>
 
-	<div class="center">
-		<div class="center-content-container">
-			<div class="profile-container">
-				<img src="images/profile.png" alt="profile picture"/>
-				<h2>This is me.</h2>
-				<h3>I am an aspiring game developer and programmer.</h3>
-			</div>
+      <div id="more-info">
+        <h1>Skills! Experience! Wow!</h1>
+        <p>I have roughly three years experience with game development using C# inside of Unity along with some experience with javascript and various software packages. I'm creative-minded as well as analytical and my love of lateral thinking puzzle games has led to great problem solving skills (as well as years of fixing bugs and development issues).</p>
+        <div class="more-info-table">
+          <div>
+            <h2>Some Experience</h2>
+            <ul>
+              <li>JavaScript</li>
+              <li>FMod</li>
+              <li>Blender</li>
+              <li>Unreal Engine</li>
+              <li>Git</li>
+            </ul>
+          </div>
+          <div>
+            <h2>Proficient</h2>
+            <ul>
+              <li>C#</li>
+              <li>Unity</li>
+              <li>Git Kraken</li>
+              <li>Trello</li>
+              <li>Adobe Creative Suite</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
-			<!-- <br/> -->
+    <div id="desktop"></div>
 
-			<div class="attributes-container">
-				<div class="skills-container">
-					<h3>Here are my skills.</h3>
-					<ul>
-						<li>C# Programming</li>
-						<li>3D Modelling</li>
-						<li>Game Design</li>
-						<li>Project Management</li>
-						<li>Web Development</li>
-					</ul>
-				</div>
+    <div id="popups"></div>
 
-				<div class="things-container">
-					<h3>Here are things I use.</h3>
-					<ul>
-						<li>Unity, Unreal Engine</li>
-						<li>Photoshop, Illustrator</li>
-						<li>Blender</li>
-						<li>GitHub, GitKraken</li>
-						<li>Visual Studio</li>
-					</ul>
-				</div>
-			</div>
+    <div id="start-menu">
+      <div>
+        <div id="profile-container">
+          <img src="images/profile.jpg" alt="">
+        </div>
+        <h1>AUBREY<br>Vigus</h1>
+        <h2>- programmer<br>- game developer</h2>
+      </div>
+      <p>
+        Hi! I’m Aubrey. I have been enamoured by game development ever since I learned about it in early high school,
+        planning out games I’d never make with my friends and trying to learn Unity through video tutorials and stack
+        overflow. Years later and I still have the same passion for creating and learning as I did back then.
+      </p>
+      <div class="center-contents">
+        <button class="butt-3D learn-more-button" onclick="windowMoreInfo.show(); toggleStartMenu();">
+          <span>Learn More</span>
+        </button>
+        <button class="butt-3D contact-button" onclick="window.location.href = 'mailto:aubreyvigus@gmail.com';">
+          <span>Contact</span>
+        </button>
+      </div>
+    </div>
 
-			<div class="blurb-container">
-				<p>
-					“I have been interested in video games and game development since
-					I was a child and would often spend time with my friends making up
-					fake game studios and planning out our (very overambitious) lineup
-					of games. For roughly three years I have been teaching myself C# and
-					developing prototypes and small games in Unity but have yet to make
-					a full game start to finish. At the beginning of 2021 I started
-					studying game development at SAE Institute in Perth and I have been
-					pushing myself to learn and improve as much as I can.”
-				</p>
-			</div>
+    <div id="task-bar">
+      <div id="start-menu-button" onclick="toggleStartMenu();">
+        <img src="images/logo-white.png" alt="">
+      </div>
+      <div id="date-time">
+        <h2>12:00</h2>
+        <h4>01/01/1997</h4>
+      </div>
+    </div>
 
-			<div class="project-button-container">
-				<button onclick="window.location.href = 'projects.html';">View my Projects</button>
-			</div>
-		</div>
-	</div>
-</body>
+    <script src="Vector.js"></script>
+    <script src="Functions.js"></script>
+    <script src="Clicky.js"></script>
+    <script src="Popup.js"></script>
+    <script src="Projects.js"></script>
+    <script src="Events.js"></script>
+    <script src="DateTime.js"></script>
+  </body>
 </html>
