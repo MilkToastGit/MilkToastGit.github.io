@@ -11,14 +11,24 @@
     <div id="templates">
       <table id="project-cover">
         <tr>
-          <td style="width:60%" class="project-info">
+          <td class="project-overview">
             <h1 class="title"></h1>
-            <h2 class="short-description"></h2>
-            <p class="description"></p>
+            <p class="short-description"></p>
+            <div class="project-carousel">
+              <img src="images/carousel-arrow.png" class="left-carousel-button">
+              <img src="images/carousel-arrow.png" class="right-carousel-button">
+            </div>
           </td>
-          <td class="project-images">
-            <p class="date"></p>
-            <p class="time-span"></p>
+          <td class="project-details">
+            <div>
+              <p class="date-time-span">
+                <span class="date"></span>
+                <span class="time-span"></span>
+              </p>
+              <p class="team"></p>
+              <p class="platform"></p>
+              <div class="project-roles"></div>
+            </div>
           </td>
         </tr>
       </table>
@@ -50,7 +60,7 @@
         </div>
       </div>
     </div>
-
+  
     <div id="desktop"></div>
 
     <div id="popups"></div>
@@ -88,6 +98,8 @@
       </div>
     </div>
 
+    <img id="pointer" src="images/pointer-up.png">
+
     <script src="Vector.js"></script>
     <script src="Functions.js"></script>
     <script src="MouseableGuys.js"></script>
@@ -95,5 +107,6 @@
     <script src="Projects.js"></script>
     <script src="Events.js"></script>
     <script src="DateTime.js"></script>
+    <script src="Smiley.js"></script>
   </body>
 </html>

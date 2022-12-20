@@ -66,7 +66,6 @@ class Dragger extends Clicky{
         if (!this.mouseDown) return;
 
         this.position = Vector.add(mousePos, this.mouseOffset);
-        console.log(this.position);
 
         if(this.clamp) {
             const max = new Vector(document.getElementById('body').clientWidth,

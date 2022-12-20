@@ -1,6 +1,7 @@
 const body = document.getElementById('body');
 const startMenu = document.getElementById('start-menu');
 const desktop = document.getElementById('desktop');
+const pointer = document.getElementById('pointer');
 
 let lastMousePos = new Vector();
 let mousePos = new Vector();
@@ -8,10 +9,17 @@ let mouseDelta = new Vector();
 
 let startMenuShowing = false;
 
+document.addEventListener('mousedown', () => onMouseDown());
 document.addEventListener('mouseup', () => onMouseUp());
 document.addEventListener('mousemove', (e) => onMouseMove(e));
 
+function onMouseDown() {
+    pointer.src = 'images/pointer-down.png';
+}
+
 function onMouseUp() {
+    pointer.src = 'images/pointer-up.png';
+
     for(let clicky of AllClickys) {
         clicky.onMouseUpDefault();
         if (typeof clicky.onMouseUp === 'function') 
@@ -23,6 +31,9 @@ function onMouseMove(event) {
     lastMousePos = mousePos.copy();
     mousePos.set(event.clientX, event.clientY)
     mouseDelta = Vector.sub(mousePos, lastMousePos);
+
+    pointer.style.left = mousePos.x + "px";
+    pointer.style.top = mousePos.y + "px";
 
     for(let clicky of AllClickys) {
         clicky.onMouseMoveDefault();
@@ -46,7 +57,7 @@ let windowRgb = new Popup(new Vector(100, 45), new Vector(600, 450), 'project-co
 replaceProjectInfo(windowRgb.content, projects["RGB"]);
 let shortcutRgb = new Shortcut(new Vector(50, 50), new Vector(100, 100), desktop, windowRgb, 'images/icon-rgb.png');
 
-let window5pm = new Popup(new Vector(125, 60), new Vector(600, 500), 'project-cover');
+let window5pm = new Popup(new Vector(125, 60), new Vector(600, 350), 'project-cover');
 replaceProjectInfo(window5pm.content, projects["5pm"]);
 let shortcut5pm = new Shortcut(new Vector(150, 150), new Vector(100, 100), desktop, window5pm, 'images/icon-5pm.png');
 

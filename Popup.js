@@ -2,9 +2,11 @@ const popupContainer = document.getElementById('popups');
 const headerThickness = 40;
 
 class Popup {
-    constructor(position, size, templateId) {
+    constructor(position, size, templateId, destroyOnClose = false) {
         this.position = position;
         this.size = size;
+
+        this.destroyOnClose = destroyOnClose;
 
         this.base = document.createElement('div');
         this.base.classList.add('popup');
@@ -35,9 +37,7 @@ class Popup {
         this.header.base.style.width = '100%';
         // let headerShadow = document.createElement('div');
         // headerShadow.classList.add('header-shadow');
-         this.header.onMouseDown = function() {
-            this.target.parentNode.appendChild(this.target);
-         };
+         this.header.onMouseDown = () => {this.focus()};
 
         this.closeClicky = new Clicky(new Vector(this.size.x - headerThickness / 2 - 10, headerThickness / 2 - 10), new Vector(20, 20), this.header.base);
         this.closeClicky.base.classList.add('popup-close');
@@ -47,6 +47,10 @@ class Popup {
         }
 
         this.hide();
+    }
+
+    focus() {
+        popupContainer.appendChild(this.base);
     }
 
     show() {
@@ -60,6 +64,11 @@ class Popup {
         // this.base.style.width = 0;
         // this.base.style.height = 0;
         // this.closeClicky.base.style.display = "none";
-        this.base.style.display = "none";
+        if(this.destroyOnClose) {
+            this.base.remove();
+        }
+        else {
+            this.base.style.display = "none";
+        }
     }
 }
