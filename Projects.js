@@ -180,20 +180,30 @@ function clickCarouselImage(project, index) {
         return;
     }
 
+    let img = new Image();
+
+    img.onload = function(){
+      setCarouselImagePopupSize(img, project, index);
+    }
+    
+    img.src = project.images[index];
+}
+
+function setCarouselImagePopupSize(img, project, index) {
     let element = project.imgElements[index];
 
-    let widthIsLargest = element.clientWidth > element.clientHeight;
+    let widthIsLargest = img.width > img.height;
     let largestDimension = 600;
     let size = new Vector();
-    size.x = widthIsLargest ? largestDimension : element.clientWidth / element.clientHeight * largestDimension;
-    size.y = widthIsLargest ? element.clientHeight / element.clientWidth * largestDimension : largestDimension;
+    size.x = widthIsLargest ? largestDimension : img.width / img.height * largestDimension;
+    size.y = widthIsLargest ? img.height / img.width * largestDimension : largestDimension;
 
     let window = new Popup(new Vector(150, 200), size, null, true);
     project.imageWindows[index] = window;
-    let img = document.createElement('img');
-    img.src = element.src;
-    img.style.width = '100%';
-    window.content.append(img);
+    let imgElement = document.createElement('img');
+    imgElement.src = element.src;
+    imgElement.style.width = '100%';
+    window.content.append(imgElement);
     window.content.style.overflow = 'hidden';
     window.show();
 }
