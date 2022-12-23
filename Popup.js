@@ -39,7 +39,7 @@ class Popup {
         // headerShadow.classList.add('header-shadow');
          this.header.onMouseDown = () => {this.focus()};
 
-        this.closeClicky = new Clicky(new Vector(this.size.x - headerThickness / 2 - 10, headerThickness / 2 - 10), new Vector(20, 20), this.header.base);
+        this.closeClicky = new Clicky(new Vector(this.size.x - headerThickness / 2 - 13, headerThickness / 2 - 13), new Vector(26, 26), this.base);
         this.closeClicky.base.classList.add('popup-close');
         this.closeClicky.closeTarget = this;
         this.closeClicky.onClick = function() {

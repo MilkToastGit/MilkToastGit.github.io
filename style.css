@@ -22,7 +22,7 @@ body {
     background-repeat: repeat;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, a {
     font-family: 'Reem Kufi Ink', sans-serif;
     color: #F92A82;
 }
@@ -128,11 +128,29 @@ button:hover {
 
 .popup-close {
     background-color: #F92A82;
-    border-radius: 5px;
+    background-image: url(images/close-button.png);
+    background-size: 100%;
+    border-radius: 50%;
+
+    -webkit-box-shadow: inset 0 4px 0 #C6125E;
+	   -moz-box-shadow: inset 0 4px 0 #C6125E;
+	        box-shadow: inset 0 4px 0 #C6125E;
 }
 
 .popup-close:hover {
-    background-color: #f94a96;
+    background-color: #f4267f;
+    background-position-y: 1px;
+    -webkit-box-shadow: inset 0 5px 0 #C6125E;
+	   -moz-box-shadow: inset 0 5px 0 #C6125E;
+	        box-shadow: inset 0 5px 0 #C6125E;
+}
+
+.popup-close:active {
+    background-color: #ed237b;
+    background-position-y: 3px;
+    -webkit-box-shadow: inset 0 7px 0 #C6125E;
+	   -moz-box-shadow: inset 0 7px 0 #C6125E;
+	        box-shadow: inset 0 7px 0 #C6125E;
 }
 
 iframe.popup-content {
@@ -366,13 +384,13 @@ iframe.popup-content {
 
 .project-cover .short-description {
     text-align: center;
-    color: #FF6FAB;
+    color: black;
     margin: 0 10px 10px 10px;
 }
 
 .project-cover p {
     font-size: 100%;
-    text-align: justify;
+    text-align: left;
 }
 
 .project-cover tbody {
@@ -398,6 +416,42 @@ iframe.popup-content {
     height: 100%;
     overflow: scroll;
     padding: 0 20px 0 20px;
+}
+
+.project-details h2 {
+    color: #F5DBCB;
+}
+
+.project-details p {
+    color: #F5DBCB;
+}
+
+.project-links {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.project-links a {
+    text-decoration: none;
+    display: block;
+    min-width: 50px;
+    height: 20px;
+    border-radius: 5%;
+    background-color: #f4267f;
+    
+    color: #F5DBCB;
+    text-align: center;
+    padding: 10px;
+}
+
+.project-links a:hover {
+    background-color: #ff398f;
+}
+
+.project-links a:active {
+    background-color: #e8297c;
 }
 
 .date-time-span {
@@ -437,6 +491,8 @@ iframe.popup-content {
 
 .project-image {
     width: 100%;
+    max-height: 350px;
+    object-fit: cover;
     border-radius: 20px;
     margin-bottom: 10px;
 }
@@ -463,6 +519,26 @@ iframe.popup-content {
 .left-carousel-button {
     left: 0;
     transform: scaleX(-1);
+}
+
+.right-carousel-button:hover {
+    filter: brightness(125%);
+    transform: scale(110%);
+}
+
+.left-carousel-button:hover {
+    filter: brightness(125%);
+    transform: scale(-110%);
+}
+
+.right-carousel-button:active {
+    filter: brightness(110%);
+    transform: scale(90%);
+}
+
+.left-carousel-button:active {
+    filter: brightness(110%);
+    transform: scale(-90%);
 }
 
 .project-carousel img:disabled {
