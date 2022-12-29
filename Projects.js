@@ -26,6 +26,7 @@ const projects = {
         images: ['images/rgb/01.png', 'images/rgb/02.png', 'images/rgb/03.png'],
         backgroundColour: "#2b2b2b"
     },
+
     'LA Dogoir': {
         title: 'LA Dogoir',
         date: '5 May 2022',
@@ -53,6 +54,7 @@ const projects = {
         images: ['images/la-dogoir/01.png', 'images/la-dogoir/02.png', 'images/la-dogoir/03.png'],
         backgroundColour: "#4a4744"
     },
+
     '5pm': {
         title: '5pm',
         date: '25 Aug 2021',
@@ -80,6 +82,7 @@ const projects = {
         images: ['images/5pm/01.gif', 'images/5pm/02.gif', 'images/5pm/03.gif'],
         backgroundColour: '#4d4328'
     },
+
     'Star Garden': {
         title: 'Star Garden',
         date: '19 Aug 2022',
@@ -102,6 +105,33 @@ const projects = {
         //'The primary purpose of this project was to create a game that would generate revenue. I was the programmer for this project, creating various interworking systems such as an inventory, lootboxes, currency, decorations, pets and reading and writing save data. Since the game was created as a university project, the monetisation methods are not implemented and are currently just placeholders but we plan to develop this game further and release it on the android app store in the near future.',
         images: ['images/star-garden/01.gif'],
         backgroundColour: "#71006F"
+    },
+
+    'Axiom': {
+        title: 'Axiom',
+        date: '16 Dec 2022',
+        timeSpan: '6 Months',
+        team: '12',
+        platform: 'PC',
+        shortDescription: 'Play as an assassin with the power to enter the human mind in this fast-paced, non-euclidean parkour game.',
+        roles: [
+            {
+                heading: 'Technical Art',
+                description: "I was responsible for the creation and implementation of various complex visual effects, scene transitions and animations. Some examples include portal rendering, an animated shader for a 'mind core,' static poses/shots for 'memories' and some animation for the final cutscene.",
+            },
+            {
+                heading: 'Programming',
+                description: "As secondary programmer, I was responsible for the 'non-euclidean' mechanics such as portals and gravity shifting ramps and platforms. I created a guide trail using bezier curves to guide lost players and various scripts to aid with creating dynamic animations and smooth transition effects.",
+            }
+        ],
+        links: [
+            {
+                text: 'Game Page',
+                link: 'https://store.steampowered.com/app/2176310/Axiom/'
+            }
+        ],
+        images: ['images/axiom/portals.gif', 'images/axiom/gravity-ramps.gif', 'images/axiom/guide-trail.gif', 'images/axiom/mind-core.gif', 'images/axiom/final-cutscene.gif'],
+        backgroundColour: "#551A1C"
     }
 };
 
@@ -223,3 +253,7 @@ let shortcutStarGarden = new Shortcut(new Vector(50, 250), new Vector(100, 100),
 let windowLaDogoir = new Popup(new Vector(150, 85), new Vector(600, 350), 'project-cover');
 replaceProjectInfo(windowLaDogoir.content, projects["LA Dogoir"]);
 let shortcutLaDogoir = new Shortcut(new Vector(150, 350), new Vector(100, 100), desktop, windowLaDogoir, 'images/icon-la-dogoir.png');
+
+let windowAxiom = new Popup(new Vector(150, 85), new Vector(600, 350), 'project-cover');
+replaceProjectInfo(windowAxiom.content, projects["Axiom"]);
+let shortcutAxiom = new Shortcut(new Vector(50, 450), new Vector(100, 100), desktop, windowAxiom, 'images/icon-axiom.png');
