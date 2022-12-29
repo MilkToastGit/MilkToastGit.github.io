@@ -130,7 +130,7 @@ const projects = {
                 link: 'https://store.steampowered.com/app/2176310/Axiom/'
             }
         ],
-        images: ['images/axiom/portals.gif', 'images/axiom/gravity-ramps.gif', 'images/axiom/guide-trail.gif', 'images/axiom/mind-core.gif', 'images/axiom/final-cutscene.gif'],
+        images: ['images/axiom/portal-jump.gif', 'images/axiom/guide-trail.gif', 'images/axiom/gravity-ramp.gif', 'images/axiom/memory.gif', 'images/axiom/mind-core.gif',],
         backgroundColour: "#551A1C"
     }
 };
