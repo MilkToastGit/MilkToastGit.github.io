@@ -1,7 +1,7 @@
 const AllClickys = [];
 
 class Clicky {
-    constructor(position, size, parent, draggable = false, clamp = false) {
+    constructor(position, size, parent, draggable = false, clamp = false, anchor='top-left') {
         this.size = size;
         this.halfSize = Vector.mult(size, 0.5);
         this.position = position;
@@ -13,8 +13,20 @@ class Clicky {
         this.base.style.width = size.x + 'px';
         this.base.style.height = size.y + 'px';
         this.base.style.position = 'absolute';
-        this.base.style.left = position.x + 'px';
-        this.base.style.top = position.y + 'px';
+
+        let anchorComponents = anchor.split('-');
+        console.log(anchorComponents[0]);
+        console.log(anchorComponents[1]);
+
+        if(anchorComponents[0] == 'top')
+            this.base.style.top = position.y + 'px';
+        else
+            this.base.style.bottom = position.y + 'px';
+
+        if(anchorComponents[1] == 'left')
+            this.base.style.left = position.x + 'px';
+        else
+            this.base.style.right = position.x + 'px';
         
         parent.append(this.base);
 
@@ -80,8 +92,8 @@ class Dragger extends Clicky{
 }
 
 class Shortcut extends Clicky {
-    constructor(position, size, parent, target, icon) {
-        super(position, size, parent);
+    constructor(position, size, parent, target, icon, anchor='top-left') {
+        super(position, size, parent, false, false, anchor);
         this.target = target;
         this.icon = icon;
         this.base.classList.add('shortcut');

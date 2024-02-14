@@ -428,7 +428,7 @@ iframe.popup-content {
 
 .project-links {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-bottom: 30px;
     margin-top: 30px;
 }
@@ -444,6 +444,7 @@ iframe.popup-content {
     color: #F5DBCB;
     text-align: center;
     padding: 10px;
+    margin: 0 15px 0 15px;
 }
 
 .project-links a:hover {
@@ -543,4 +544,67 @@ iframe.popup-content {
 
 .project-carousel img:disabled {
     visibility: hidden;
+}
+
+/* POSITION */
+
+.position-cover
+{
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    background-color: #1F1F1F;
+
+    display: flex;
+    flex-flow: column;
+}
+
+.position-cover .company {
+    text-align: left;
+    font-size: 250%;
+    margin: 10px 0 0 0;
+}
+
+.position-cover .position {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 140%;
+}
+
+.position-cover .description {
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.position-header {
+    box-sizing: border-box;
+    padding: 0 25px 0 25px;
+    overflow: hidden;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+
+    box-shadow: 0 0 10px 0 #0000008c;
+}
+
+.position-header .heading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.position-description {
+    flex: 1;
+    overflow: scroll;
+    padding: 0 60px 0 60px;
+}
+
+.sticky-note {
+    background-color: #e6d76d;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+
+    -webkit-box-shadow: 0 0 6px 6px #A759292C, 10px 10px 0 0 #A759292C;
+    -moz-box-shadow: 0 0 6px 6px #A759292C, 10px 10px 0 0 #A759292C;
+    box-shadow: 0 0 6px 6px #A759292C, 10px 10px 0 0 #A759292C;
 }

@@ -132,6 +132,79 @@ const projects = {
         ],
         images: ['images/axiom/portal-jump.gif', 'images/axiom/guide-trail.gif', 'images/axiom/gravity-ramp.gif', 'images/axiom/memory.gif', 'images/axiom/mind-core.gif',],
         backgroundColour: "#551A1C"
+    },
+
+    'Wonderland': {
+        title: 'Wonderland VR',
+        date: 'Feb 2023',
+        timeSpan: '5 Months',
+        team: '11',
+        platform: 'VR',
+        shortDescription: 'Created with Unreal Engine in collaboration with the WA Museum - Enter the curious world of Wonderland in this short VR experience.',
+        roles: [
+            {
+                heading: 'Programming',
+                description: "As project lead and lead programmer, I was tasked with keeping track of overall progress, piecing together and making modifications to everyone's contributions and making sure the game ran smoothly on the provided hardware, I kept track of overall progress and was in charge of making sure the game functioned as a whole and ran smoothly on the provided hardware.",
+            },
+            {
+                heading: 'Technical Art',
+                description: "I created the opening scene, transitions between each scene and added some interactive animations throughout the game",
+            }
+        ],
+        links: [
+            {
+                text: 'Game Page',
+                link: 'https://milktoastowo.itch.io/wonderland-vr'
+            }
+        ],
+        images: ['images/wonderland/hole-fall.gif'],
+        backgroundColour: "#2A1741"
+    }
+};
+
+const positions = {
+    'EverySecond': {
+        company: 'EverySecond Studio',
+        position: 'Contractor - Lead Programmer',
+        timeSpan: 'Jun 2023 - Present',
+        description: 'Throughout my time working as a contractor for Everysecond Studios, I have contributed to the development of “Omi Oh My AI,” a captcha based puzzle game.\n\nI have spent my time implementing core game elements, developer debug features, bug fixes, and most recently localisation tools. I was promoted to lead programmer on the project in November of 2023, leaving me in charge of managing the codebase and implementing any remaining core mechanics and systems.',
+        links: [
+            {
+                text: 'Studio Page',
+                link: 'https://twitter.com/EverySecondTeam'
+            },
+            {
+                text: 'Game Page',
+                link: 'https://store.steampowered.com/app/1867110/Omi_Oh_My_AI/'
+            }
+        ],
+        accentColour: '#FFCC66'
+    },
+    'Flufflesocket': {
+        company: 'Flufflesocket Studios',
+        position: 'Contractor - Programming & Technical Art',
+        timeSpan: 'Jul 2023 - Present',
+        description: '',
+        links: [
+            {
+                text: 'Game Page',
+                link: 'https://farseersdomain.com/'
+            }
+        ],
+        accentColour: '#9D84FF'
+    },
+    'Octarine': {
+        company: 'Octarine Arts',
+        position: 'Director',
+        timeSpan: 'Jun 2023 - Present',
+        description: '',
+        links: [
+            {
+                text: 'Studio Page',
+                link: 'https://linktr.ee/octarinearts'
+            }
+        ],
+        accentColour: '#7DE9B1'
     }
 };
 
@@ -161,14 +234,7 @@ function replaceProjectInfo(base, project) {
         rolesBase.append(description);
     }
 
-    let linksBase = base.getElementsByClassName('project-links')[0];
-    for(let link of project.links) {
-        let button = document.createElement('a');
-        button.innerText = link.text;
-        button.href = link.link;
-        button.target= "_blank";
-        linksBase.append(button);
-    }
+    addLinks(base, project.links);
 
     project.imgIndex = 0;
     project.imgElements = [];
@@ -191,6 +257,28 @@ function replaceProjectInfo(base, project) {
     project.imageWindows = [];
 
     incrementCarousel(0, project);    
+}
+
+function replacePositionInfo(base, position) {
+    let company = base.getElementsByClassName('company')[0];
+    company.innerText = position.company;
+    company.style.color = position.accentColour;
+    base.getElementsByClassName('position')[0].innerText = position.position;
+    base.getElementsByClassName('timeSpan')[0].innerText = position.timeSpan;
+    base.getElementsByClassName('description')[0].innerText = position.description;
+
+    addLinks(base, position.links);
+}
+
+function addLinks(base, links) {
+    let linksBase = base.getElementsByClassName('project-links')[0];
+    for(let link of links) {
+        let button = document.createElement('a');
+        button.innerText = link.text;
+        button.href = link.link;
+        button.target= "_blank";
+        linksBase.append(button);
+    }
 }
 
 function incrementCarousel(amount, project) {
@@ -238,6 +326,8 @@ function setCarouselImagePopupSize(img, project, index) {
     window.show();
 }
 
+//PROJECTS
+
 let windowRgb = new Popup(new Vector(100, 45), new Vector(600, 350), 'project-cover');
 replaceProjectInfo(windowRgb.content, projects["RGB"]);
 let shortcutRgb = new Shortcut(new Vector(50, 50), new Vector(100, 100), desktop, windowRgb, 'images/icon-rgb.png');
@@ -257,3 +347,21 @@ let shortcutLaDogoir = new Shortcut(new Vector(150, 350), new Vector(100, 100), 
 let windowAxiom = new Popup(new Vector(150, 85), new Vector(600, 350), 'project-cover');
 replaceProjectInfo(windowAxiom.content, projects["Axiom"]);
 let shortcutAxiom = new Shortcut(new Vector(50, 450), new Vector(100, 100), desktop, windowAxiom, 'images/icon-axiom.png');
+
+let windowWonderland = new Popup(new Vector(150, 85), new Vector(650, 400), 'project-cover');
+replaceProjectInfo(windowWonderland.content, projects["Wonderland"]);
+let shortcutWonderland = new Shortcut(new Vector(250, 50), new Vector(100, 100), desktop, windowWonderland, 'images/icon-wonderland.png');
+
+// POSITIONS
+
+let windowEverySecond = new Popup(new Vector(150, 85), new Vector(700, 300), 'position-cover');
+replacePositionInfo(windowEverySecond.content, positions["EverySecond"]);
+let shortcutEverySecond = new Shortcut(new Vector(50, 50), new Vector(100, 100), desktop, windowEverySecond, 'images/icon-EverySecond.png', 'top-right');
+
+let windowFlufflesocket = new Popup(new Vector(150, 85), new Vector(700, 300), 'position-cover');
+replacePositionInfo(windowFlufflesocket.content, positions["Flufflesocket"]);
+let shortcutFlufflesocket = new Shortcut(new Vector(50, 250), new Vector(100, 100), desktop, windowFlufflesocket, 'images/icon-Flufflesocket.png', 'top-right');
+
+let windowOctarine = new Popup(new Vector(150, 85), new Vector(700, 300), 'position-cover');
+replacePositionInfo(windowOctarine.content, positions["Octarine"]);
+let shortcutOctarine = new Shortcut(new Vector(50, 450), new Vector(100, 100), desktop, windowOctarine, 'images/icon-Octarine.png', 'top-right');
