@@ -167,7 +167,7 @@ const positions = {
         company: 'EverySecond Studio',
         position: 'Contractor - Lead Programmer',
         timeSpan: 'Jun 2023 - Present',
-        description: 'Throughout my time working as a contractor for Everysecond Studios, I have contributed to the development of “Omi Oh My AI,” a captcha based puzzle game.\n\nI have spent my time implementing core game elements, developer debug features, bug fixes, and most recently localisation tools. I was promoted to lead programmer on the project in November of 2023, leaving me in charge of managing the codebase and implementing any remaining core mechanics and systems.',
+        description: 'As a contractor with Everysecond Studios, contributing to the development of "Omi Oh My AI," a captcha-based puzzle game, my primary responsibilities have involved implementing core game elements, developer debug features, bug fixes, and, most recently, localization tools.\n\nIn November 2023, I was promoted to the role of lead programmer for the project. This new role entrusted me with managing the codebase and implementing any remaining core mechanics and systems. In addition to implementing some of the more essential game elements, I’ve also created various smaller visual effects and mini-games, such as a UI glitch effect and a playful homage to the Mario 64 face-stretch title screen, featuring our game’s mascot, Omi.',
         links: [
             {
                 text: 'Studio Page',
@@ -182,9 +182,9 @@ const positions = {
     },
     'Flufflesocket': {
         company: 'Flufflesocket Studios',
-        position: 'Contractor - Programming & Technical Art',
-        timeSpan: 'Jul 2023 - Present',
-        description: '',
+        position: 'Contractor - Unity Generalist',
+        timeSpan: 'Jul 2023 - Feb 2024',
+        description: 'As a contractor for Flufflesocket Studios on “Farseer’s Domain,” I contributed to various technical and visual aspects of the project. My responsibilities included creating and implementing visual effects using shaders, coding UI functionality, and addressing bugs and necessary improvements.\n\nMuch of my role involved enhancing the game’s visual and interactive elements. This included creating a fog of war shader, an animated shader effect to illustrate player movement and a nested tooltip system for explaining the game’s mechanics and key terms to players. Additionally, I worked on refining the game’s garden map by adding small visual effects and improvements such as adding sway animation to foliage and stylised flowing water to a fountain in the center of the map.\n\nMany of these tasks required understanding, modifying and expanding upon a pre-existing and expansive codebase. I started out with little experience in this area and have since gained essential skills in reading code written by others and integrating new systems into it.',
         links: [
             {
                 text: 'Game Page',
@@ -197,7 +197,7 @@ const positions = {
         company: 'Octarine Arts',
         position: 'Director',
         timeSpan: 'Jun 2023 - Present',
-        description: '',
+        description: 'As a director at Octarine Arts, contributing to the development of “Finch & Archie,” a co-op detective game funded by screenwest, I am an integral part of a close-knit team of six developers, driven by our shared passion for game development. Working in tandem with this team, I take on the responsibility of programming core visual and gameplay elements while also contributing to critical game design and mechanics decisions during our weekly team meetings.\n\nGiven our small team size, my role extends to many different areas from front-end visual work to designing and implementing essential systems and functionality. Some of my more noteworthy tasks include managing input, networking, and dynamic animations for the character controllers, back-end and front-end implementation for collecting and sending ‘leads,’ and some of the back-end for the player communication system.\n\nAlthough my contributions to the game in a technical sense are important, effective communication and collaborative work, alongside my ability to work independently when needed, have been essential to the success of the project. I actively participate in discussions about marketing strategies, budget allocation, responding to feedback, managing our contracted artist team and ensuring that we meet contractual obligations and deadlines.',
         links: [
             {
                 text: 'Studio Page',

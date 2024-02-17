@@ -554,7 +554,7 @@ iframe.popup-content {
     height: 100%;
     border-collapse: collapse;
     overflow: hidden;
-    background-color: #1F1F1F;
+    background-color: #171717;
 
     display: flex;
     flex-flow: column;
@@ -583,6 +583,7 @@ iframe.popup-content {
     overflow: hidden;
     border-bottom-width: 1px;
     border-bottom-style: solid;
+    background-color: #242424;
 
     box-shadow: 0 0 10px 0 #0000008c;
 }
@@ -596,6 +597,10 @@ iframe.popup-content {
     flex: 1;
     overflow: scroll;
     padding: 0 60px 0 60px;
+}
+
+.position-cover p {
+    color: #e8e6e3;
 }
 
 .sticky-note {
