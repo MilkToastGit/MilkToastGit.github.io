@@ -229,11 +229,9 @@ iframe.popup-content {
 
 #start-menu {
     position: fixed;
-    width: 400px;
-    height: 600px;
+    width: 450px;
+    height: 650px;
     bottom: -600px;
-
-    padding: 25px;
 
     background-color: #FFCCE1;
     border-color: #F92A82;
@@ -246,38 +244,59 @@ iframe.popup-content {
     box-shadow: inset 0 25px 0 #FFB3D3;
 }
 
-#start-menu h1 {
-    display: inline;
+#start-menu-header {
+    background-color: #7EB77F;
+    border-radius: 30px 30px 0 0;
+    height: 110px;
+
+    display: grid;
+    grid-template-columns: 110px auto;
+
+    -webkit-box-shadow: inset 0 -20px 0 #54A181;
+	   -moz-box-shadow: inset 0 -20px 0 #54A181;
+	        box-shadow: inset 0 -20px 0 #54A181;
+}
+
+#start-menu-header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#start-menu-header h1 {
+    color: white;
     font-size: 300%;
-    width: 49%;
-    margin-top: 0;
+    margin: 0;
     line-height: 120%;
+
+    text-shadow: 0 4px #54A181;
 }
 
-#start-menu h2 {
-    color: #FF66A7;
-    margin-top: 10px;
+#start-menu-header h2 {
+    color: white;
+    margin: -6px 0 0 0;
 }
 
-#profile-container {
-    display: inline;
-    float: right;
-    top: 0;
-    right: 0;
-    width: 49%;
-    margin-top: 5px;
-    border-radius: 50%;
-    
-    -webkit-box-shadow: inset 0 20px 0 #66004169;
-    -moz-box-shadow: inset 0 20px 0 #66004169;
-    box-shadow: inset 0 20px 0 #66004169;
+#menu-profile-container {
+    display: flex;
+    width: 110px;
+    height: 100%;
 }
 
-#profile-container img {
-    position: relative;
-    width: 100%;
-    border-radius: 50%;
-    z-index: -2;
+#menu-profile-container img {
+    margin: auto;
+    border-radius: 10px;
+}
+
+#start-about-me {
+    margin: 20px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#start-about-me h2, #start-about-me p {
+    margin: 0;
 }
 
 #start-menu .center-contents {
