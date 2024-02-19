@@ -93,7 +93,7 @@ const projects = {
         roles: [
             {
                 heading: 'Programming',
-                description: 'As lead programmer, I designed and implemented various interworking systems for inventory, currency, lootboxes, decorations, pet behaviour and managing save data. Monetisation methods are currently placeholder but we plan to develop this game further and release it on the android app store in the near future.',
+                description: 'As lead programmer, I designed and implemented various interworking systems for inventory, currency, lootboxes, decorations, pet behaviour and managing save data. Monetisation methods are placeholder as this was created as a proof of concept.',
             }
         ],
         links: [
@@ -144,7 +144,7 @@ const projects = {
         roles: [
             {
                 heading: 'Programming',
-                description: "As project lead and lead programmer, I was tasked with keeping track of overall progress, piecing together and making modifications to everyone's contributions and making sure the game ran smoothly on the provided hardware, I kept track of overall progress and was in charge of making sure the game functioned as a whole and ran smoothly on the provided hardware.",
+                description: "As project lead and lead programmer, I was tasked with keeping track of overall progress, piecing together and making modifications to everyone's contributions and making sure the game ran smoothly on the provided hardware.",
             },
             {
                 heading: 'Technical Art',
