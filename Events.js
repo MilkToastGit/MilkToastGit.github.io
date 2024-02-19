@@ -1,5 +1,6 @@
 const body = document.getElementById('body');
 const startMenu = document.getElementById('start-menu');
+const startMenuButton = document.getElementById('start-menu-button').children[0];
 const desktop = document.getElementById('desktop');
 const pointer = document.getElementById('pointer');
 
@@ -42,10 +43,21 @@ function onMouseMove(event) {
     }
 }
 
+let smileWaitCount = 0;
 function toggleStartMenu() {
     startMenu.style.animation = '';
     startMenu.offsetWidth;
     startMenu.style.animation = 'menu-show-anim 250ms ease-out 0s 1 ' + (startMenuShowing ? 'reverse' : 'normal') + ' both';
+    startMenuButton.src = 'images/logo-surprise.png';
+
+    smileWaitCount++;
+    setTimeout (makeLilGuySmile, 1500);
+    console.log(startMenuButton.nodeName);
 
     startMenuShowing = !startMenuShowing;
+}
+
+function makeLilGuySmile() {
+    if(--smileWaitCount <= 0)
+        startMenuButton.src = 'images/logo-smile.png';
 }
