@@ -49,8 +49,3 @@ function toggleStartMenu() {
 
     startMenuShowing = !startMenuShowing;
 }
-
-// let testWindow = new Popup(new Vector(100, 45), new Vector(200, 150));
-// let testClicky = new Shortcut(new Vector(50, 50), new Vector(100, 100), desktop, testWindow, 'images/icon-rgb.png');
-
-let windowMoreInfo = new Popup(new Vector(150, 100), new Vector(600, 500), 'more-info');
