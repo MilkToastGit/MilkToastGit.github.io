@@ -52,8 +52,7 @@ function toggleStartMenu() {
 
     smileWaitCount++;
     setTimeout (makeLilGuySmile, 1500);
-    console.log(startMenuButton.nodeName);
-
+    
     startMenuShowing = !startMenuShowing;
 }
 
