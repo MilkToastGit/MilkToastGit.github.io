@@ -15,8 +15,6 @@ class Clicky {
         this.base.style.position = 'absolute';
 
         let anchorComponents = anchor.split('-');
-        console.log(anchorComponents[0]);
-        console.log(anchorComponents[1]);
 
         if(anchorComponents[0] == 'top')
             this.base.style.top = position.y + 'px';
