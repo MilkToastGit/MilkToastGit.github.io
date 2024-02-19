@@ -356,12 +356,12 @@ let shortcutWonderland = new Shortcut(new Vector(250, 50), new Vector(100, 100),
 
 let windowEverySecond = new Popup(new Vector(150, 85), new Vector(700, 300), 'position-cover');
 replacePositionInfo(windowEverySecond.content, positions["EverySecond"]);
-let shortcutEverySecond = new Shortcut(new Vector(50, 50), new Vector(100, 100), desktop, windowEverySecond, 'images/icon-EverySecond.png', 'top-right');
+let shortcutEverySecond = new Shortcut(new Vector(50, 50), new Vector(100, 100), desktop, windowEverySecond, 'images/icon-everysecond.png', 'top-right');
 
 let windowFlufflesocket = new Popup(new Vector(150, 85), new Vector(700, 300), 'position-cover');
 replacePositionInfo(windowFlufflesocket.content, positions["Flufflesocket"]);
-let shortcutFlufflesocket = new Shortcut(new Vector(50, 250), new Vector(100, 100), desktop, windowFlufflesocket, 'images/icon-Flufflesocket.png', 'top-right');
+let shortcutFlufflesocket = new Shortcut(new Vector(50, 250), new Vector(100, 100), desktop, windowFlufflesocket, 'images/icon-flufflesocket.png', 'top-right');
 
 let windowOctarine = new Popup(new Vector(150, 85), new Vector(700, 300), 'position-cover');
 replacePositionInfo(windowOctarine.content, positions["Octarine"]);
-let shortcutOctarine = new Shortcut(new Vector(50, 450), new Vector(100, 100), desktop, windowOctarine, 'images/icon-Octarine.png', 'top-right');
+let shortcutOctarine = new Shortcut(new Vector(50, 450), new Vector(100, 100), desktop, windowOctarine, 'images/icon-octarine.png', 'top-right');
