@@ -383,6 +383,6 @@ let windowOctarine = new Popup(new Vector(200, 130), new Vector(700, 300), 'posi
 replacePositionInfo(windowOctarine.content, positions["Octarine"]);
 let shortcutOctarine = new Shortcut(new Vector(50, 450), new Vector(100, 100), desktop, windowOctarine, 'images/icon-octarine.png', 'top-right');
 
-let windowUnnaturalFreaks = new Popup(new Vector(225, 155), new Vector(850, 400), 'position-cover');
+let windowUnnaturalFreaks = new Popup(new Vector(225, 155), new Vector(700, 300), 'position-cover');
 replacePositionInfo(windowUnnaturalFreaks.content, positions["UnnaturalFreaks"]);
 let shortcutUnnaturalFreaks = new Shortcut(new Vector(150, 350), new Vector(100, 100), desktop, windowUnnaturalFreaks, 'images/icon-unnaturalfreaks.png', 'top-right');

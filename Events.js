@@ -10,6 +10,8 @@ let mouseDelta = new Vector();
 
 let startMenuShowing = false;
 
+preloadImage('images/logo-smile.png');
+
 document.addEventListener('mousedown', () => onMouseDown());
 document.addEventListener('mouseup', () => onMouseUp());
 document.addEventListener('mousemove', (e) => onMouseMove(e));
@@ -51,7 +53,7 @@ function toggleStartMenu() {
     startMenuButton.src = 'images/logo-surprise.png';
 
     smileWaitCount++;
-    setTimeout (makeLilGuySmile, 1500);
+    setTimeout (makeLilGuySmile, 750);
     
     startMenuShowing = !startMenuShowing;
 }
