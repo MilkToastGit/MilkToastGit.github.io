@@ -10,7 +10,7 @@ let mouseDelta = new Vector();
 
 let startMenuShowing = false;
 
-preloadImage('images/logo-smile.png');
+preloadImage('images/logo-surprise.png');
 
 document.addEventListener('mousedown', () => onMouseDown());
 document.addEventListener('mouseup', () => onMouseUp());
