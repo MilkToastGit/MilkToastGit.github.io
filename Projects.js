@@ -205,6 +205,23 @@ const positions = {
             }
         ],
         accentColour: '#7DE9B1'
+    },
+    'UnnaturalFreaks': {
+        company: 'Unnatural Freaks Studio',
+        position: 'Contractor - Programmer/Developer',
+        timeSpan: 'Mar 2023 - Present',
+        description: '“The Last Werewolf” is a narrative-based mystery game being produced by a small team consisting of one main developer and several contracted artists/developers. I have been working alongside the main developer/writer to develop more robust game systems so that they can focus on writing the narrative and dialogue. This involves creating a range of new systems to manage variables and functions that were previously unhandled and disorganized. One of these systems allows for the creation and management of any number of variables of different kinds that affect the dialogue and story in certain ways. Finally, I integrate these systems with Yarnspinner, a tool for writing dynamic, branching dialogue, enabling communication from within dialogue scripts.\n\nThe game’s creator/main developer did not come from a programming background, and as such, most of the codebase consisted of messy, inefficient code which looked like a huge headache to try and manage. My main goal is to enable the addition of new content for the game without the need to write any new code, and I have really enjoyed the process of making this possible. I have made sure that, as much as possible, the game functions by itself, and anything that needs to be managed/changed throughout the game can be done through Yarnscripts (scripts used to write the game’s dialogue), and within the scenes themselves. So far my contributions have been appreciated and a welcome change to the main developer’s workflow.\n\nFuture plans for the project include a custom tool for controlling elements in the scene based on Yarnspinner variables, support for dynamic journal entries and smartphone messages to be created with Yarnscripts, and a UI overhaul for more dynamic UI elements and significantly easier implementation of new content.',
+        links: [
+            {
+                text: 'Studio Page',
+                link: 'https://unnaturalfreaksstudio.com/'
+            },
+            {
+                text: 'Game Page',
+                link: 'https://store.steampowered.com/app/2212520/'
+            }
+        ],
+        accentColour: '#DBDBDB'
     }
 };
 
@@ -358,10 +375,14 @@ let windowEverySecond = new Popup(new Vector(150, 85), new Vector(700, 300), 'po
 replacePositionInfo(windowEverySecond.content, positions["EverySecond"]);
 let shortcutEverySecond = new Shortcut(new Vector(50, 50), new Vector(100, 100), desktop, windowEverySecond, 'images/icon-everysecond.png', 'top-right');
 
-let windowFlufflesocket = new Popup(new Vector(150, 85), new Vector(700, 300), 'position-cover');
+let windowFlufflesocket = new Popup(new Vector(175, 105), new Vector(700, 300), 'position-cover');
 replacePositionInfo(windowFlufflesocket.content, positions["Flufflesocket"]);
 let shortcutFlufflesocket = new Shortcut(new Vector(50, 250), new Vector(100, 100), desktop, windowFlufflesocket, 'images/icon-flufflesocket.png', 'top-right');
 
-let windowOctarine = new Popup(new Vector(150, 85), new Vector(700, 300), 'position-cover');
+let windowOctarine = new Popup(new Vector(200, 130), new Vector(700, 300), 'position-cover');
 replacePositionInfo(windowOctarine.content, positions["Octarine"]);
 let shortcutOctarine = new Shortcut(new Vector(50, 450), new Vector(100, 100), desktop, windowOctarine, 'images/icon-octarine.png', 'top-right');
+
+let windowUnnaturalFreaks = new Popup(new Vector(225, 155), new Vector(850, 400), 'position-cover');
+replacePositionInfo(windowUnnaturalFreaks.content, positions["UnnaturalFreaks"]);
+let shortcutUnnaturalFreaks = new Shortcut(new Vector(150, 350), new Vector(100, 100), desktop, windowUnnaturalFreaks, 'images/icon-unnaturalfreaks.png', 'top-right');
